@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Agenda Digital</h1>
+
+    <nav>
+        <button onclick="mostrarSeccion('agregar')">Agregar Persona</button>
+        <button onclick="mostrarSeccion('buscar')">Buscar Persona</button>
+        <button onclick="mostrarSeccion('listar')">Listar Personas</button>
+    </nav>
+
+    <section id="seccion-agregar">
+        <h2>Agregar Persona</h2>
+        <form id="form-agregar">
+            <input type="text" id="id" placeholder="Número de Identificación" required><br>
+            <input type="text" id="nombre" placeholder="Nombres" required><br>
+            <input type="text" id="apellido" placeholder="Apellidos" required><br>
+            <input type="text" id="direccion" placeholder="Dirección" required><br>
+            <input type="text" id="telefono" placeholder="Teléfono" required><br>
+            <button type="submit">Guardar</button>
+        </form>
+    </section>
+
+    <section id="seccion-buscar" class="hidden">
+        <h2>Buscar Persona</h2>
+        <select id="criterio">
+            <option value="id">Documento</option>
+            <option value="nombre">Nombre</option>
+            <option value="apellido">Apellido</option>
+        </select>
+        <input type="text" id="busqueda">
+        <button onclick="buscarPersona()">Buscar</button>
+        <div id="resultado-busqueda"></div>
+    </section>
+
+    <section id="seccion-listar" class="hidden">
+        <h2>Listado de Personas</h2>
+        <button onclick="listarPersonas()">Cargar Lista</button>
+        <div id="lista-personas"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

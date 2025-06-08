@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+nav button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+input, select, button {
+    margin: 5px 0;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+}
